@@ -1,0 +1,35 @@
+{% extends "tracker/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="container d-flex justify-content-center">
+    <h1>LOGIN</h1>
+</div>
+
+{% if message %}
+    <div>{{ message }}</div>
+{% endif %}
+<div class="container d-flex justify-content-center w-50">
+    <div class="col">
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" autofocus class="form-control login-form" name="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="password" autofocus class="form-control login-form" name="password" placeholder="Password">
+            </div>
+            <div class="d-flex justify-content-center">
+                <input class="btn login-button" type="submit" value="Login">
+            </div>            
+        </form>
+
+
+        <div class="d-flex justify-content-center">
+            <a href="{% url 'register' %}"> Don't have an account? Click me!</menu> </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,253 @@
+@keyframes delete-create{
+    0%{
+        opacity: 1;
+        max-height: 200px;
+    }
+    100%{
+        opacity: 0;
+        max-height: 0px;
+    }
+}
+
+
+/* Debugging CSS: shows the frontiers of every element
+*{
+    outline:  1px solid red;
+}
+
+*/
+
+.task-box, .history-box {
+    overflow:hidden;
+    animation-fill-mode: forwards;
+    border-bottom:solid;
+    border-bottom-width: 3px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #3b4e68;
+    opacity: 0.7;
+}
+
+
+nav{
+    width: 90%;
+    background: #171e29;
+    border-radius: 3vh;
+}
+
+.nav-link{
+    color:#729688
+}
+
+a{
+    color:rgb(166, 204, 191);
+}
+
+a:link{
+    color:aquamarine;
+}
+
+a:visited{
+    color:#15a8b3;
+}
+
+ul, li{
+    color: rgb(24, 88, 80);
+}
+
+#user-tag{
+    color:rgb(166, 204, 191);
+}
+.navbar-brand{
+    color:rgb(166, 204, 191);
+}
+
+#logout{
+    color:#a5661f;
+}
+
+#task-form {
+    justify-content: center;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+#content, #form-container{
+    margin-top: 20px;
+    margin-right: 8%;
+    margin-left: 8%;
+
+}
+
+#dropdown-search, .tempus-container{
+    display:flex;
+    padding-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.misc-dropdown{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.tempus-dominus-widget{
+    background-color: #3b4e68 !important;
+    color: aquamarine !important;
+    border-radius: 1em !important;
+    z-index: 1000 !important;
+}
+
+.tempus-dominus-widget .active{
+    background-color: aquamarine !important;
+    color: #1f2e37 !important;
+}
+
+#summary{
+    height: 50dvh;
+}
+
+#datetimepicker1{
+    height: 60%;
+    width: 40%;
+    transform: scale(1);
+    transform-origin: top left;
+}
+
+#datetimepicker2{
+    display:flex !important;
+    justify-content: center !important;
+}
+
+#chart{
+    min-height: 100%;
+    width: 100%;
+}
+
+
+.btn{
+    color: aquamarine;
+    border-color: aquamarine;
+    border-width: 2px;
+
+}
+.btn:hover{
+    background-color: aquamarine;
+    color: rgb(78, 104, 95);
+}
+
+.edit-button{
+    border-bottom-right-radius: 0em;
+    border-top-right-radius: 0em;
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+}
+.delete-button{
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 0em;
+    border-top-left-radius: 0em;
+}
+
+/*At small screen sizes, round the flat sides of the two buttons above */
+@media only screen and (max-width: 510px){
+    .edit-button, .delete-button{
+        width: 100%;
+        border-radius: 1em;
+    }
+}
+
+.edit-save, .add-button, .login-button{
+    border-radius: 1em;
+}
+
+.login-button{
+    margin-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #199b74;
+}
+
+
+
+.notes, .edit-name, .edit-category, .dropdown-summary, .form-small, #mobile-calendar, .login-form{
+    border-color: aquamarine;
+    border-width: 2px;
+    background-color: rgb(60, 66, 93);
+    opacity: 0.9;
+    color: rgb(184, 252, 229);
+    border-color: #7fffd4;
+    border-width: 2px;
+    border-radius: 0.5em;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+
+}
+
+.notes {
+    width: 90%;
+}
+
+.edit-name{
+    width: 15%;
+    max-width: 100%;
+}
+
+.notes, .login-form::placeholder{
+    color: rgb(119, 175, 158);
+}
+
+::placeholder:focus{
+    color: rgb(60, 94, 84);
+}
+
+.notes, .login-form:focus{
+    background-color: #bfc4dd;
+    color: rgb(40, 75, 75);
+}
+
+#toast{
+    opacity: 0.5;
+}
+
+#toast-content{
+    color: black;
+    font-weight: bold;
+}
+
+
+
+
+/* https://css-pattern.com/waves/ */
+body {
+  --s: 12px; /* control the size*/
+  --c1: #1f2e37;
+  --c2: #233a43;
+  
+  --_s:37.5% 12.5% at 62.5%;
+  --_g:34% 99%,#0000 101%;
+  --g1:radial-gradient(var(--_s) 100%,#0000 32%,var(--c1) var(--_g));
+  --g2:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c1) var(--_g));
+  --g3:radial-gradient(var(--_s) 100%,#0000 32%,var(--c2) var(--_g));
+  --g4:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c2) var(--_g));
+  background:
+    var(--g1),
+    var(--g2) 0                calc(3*var(--s)),
+    var(--g3) var(--s)         calc(3*var(--s)),
+    var(--g4) var(--s)         calc(6*var(--s)),
+    var(--g1) calc(2*var(--s)) calc(6*var(--s)),
+    var(--g2) calc(2*var(--s)) calc(9*var(--s)),
+    var(--g3) calc(3*var(--s)) calc(9*var(--s)),
+    var(--g4) calc(3*var(--s)) 0,
+    repeating-linear-gradient(var(--c1) 0 25%,var(--c2) 0 50%);
+  background-size: calc(4*var(--s)) calc(12*var(--s));
+
+
+
+  justify-content: center;
+  color:aliceblue;
+}
