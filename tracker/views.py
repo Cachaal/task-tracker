@@ -39,8 +39,6 @@ class NewTaskForm(forms.Form):
     }))
 
 # Create your views here.
-#NOTTODO: Edit the Models of the Database, you will need a way to add categories, so that way you can add categories to the different habit kinds
-    # Added categories to the task model, should be enough
     
 @login_required
 def index(request):
@@ -263,7 +261,6 @@ def history(request):
         current_user = User.objects.get(id=request.user.id)
         if Tracking.objects.filter(owner_username=current_user, date=selected_date).exists():
             tracking_list = Tracking.objects.filter(owner_username=current_user, date = selected_date)
-            #print(tracking_list)
             if len(tracking_list) > 0:
                 return JsonResponse({
                     'tracked_tasks': [task.serialize(request, "") for task in tracking_list]

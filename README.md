@@ -1,54 +1,9 @@
-﻿# CS50Web Capstone: Task Tracker
-Welcome to my Capstone project for the CS50Web course!
-Before we begin, I'll need a preamble before I start the documentation of the project proper.
-## Acknowledgments
-You might have noticed that there was a big gap in between submissions regarding my last submission and this one, and you are correct: There was a big gap that I need to point out for the sake of transparency. 
+﻿# Task Tracker
 
-From the beginning of 2025, I was given very unfortunate circumstances: My two dogs, in succession, were severely injured / ill and required very intensive care for a couple of months each, which I was the only available to do so; and right after that, and most importantly, my brother died tragically in the midst of this 2025 turmoil. My family and I have been through arguably our lowest point on our life, and as you might expect, life took an unfortunate turn, priorities changed.
-
-This is in no way a justification, rather the context behind the gap for your understanding, that way I won't leave you in the dark regarding the situation. I hope you can understand the delay, I really had no other option.
-
-However, as they say: "mama didn't raise no quitter". After the vortex I was in, I was surprised to see I wasn't actually kicked out of the course, so I decided to finish what I started.
-I wanna applaud all of you folks that run this course, and it's accessibility, allowing even someone under my circumstances to finish the course.
-I'm aware that I might need to resubmit some work according to the note on the website, but since I can see in my progress page instructions saying that I should NOT resubmit anything, I'll follow those for the time being. I'll be on the lookout for any further instructions on how to proceed if anything changes, so feel free to correct, or even deny my submission, if you deem this unacceptable.
-
-**Sorry to keep you waiting, let's go ahead and talk about my project.**
 ## Introduction
-The CS50Web capstone project: Task Tracker, is as the title suggests.
 Task tracker is a web tool that allows users to create a custom-made list of habits they wish to fulfill consistently. The tool will allow users to check in on their daily habits, as well as leaving comments on it on a daily basis per habit; keeping track of their history by the day; and providing graphic summaries of their progress on said habits in contrast of previous days or months so it's easier to track the deficits on their consistency.
 A combination of Django, JavaScript, HTML, CSS, Bootstrap, Chart.js and Tempus Dominus where used in tandem in order to make this project possible.
 
-## Distinctiveness and Complexity
-
-### Distinctiveness
-This project is distinct from any other projects done in this course, even if this project does use lessons learned throughout said course and its projects.
-This distinctiveness can be found in various levels, from the subtle to the not-so-subtle.
-While the course's projects purposes go from a purely aesthetic front page, to a simple social media and inbox, an e-commerce or a wiki; this project purpose, its general purpose, it's simply different. The course's projects are presented as platforms for users to exchange information, my Task Tracker project is meant to be a web tool, a personal tool that is able to be accessed remotely on any device.
-The purpose of this project is to allow an easy way to organize and track information on a day-by-day basis on a personalized manner per user, instead of simply showing the information from other users.
-**In specific contrast to the e-commerce an/or social media project** on the CS50Web course, which  once again, shows the posts from multiple users onto a single feed, my project presents an encapsulated ecosystem and personalized information, customized by every user itself individually. That entails a completely different way of presenting this information:
-
-- A custom-made list that refreshes daily, with the purpose of the user filling it every day.
-- A calendar that allows a user to extract the information that was filled on any specific day.
-- A graphic that can be set up to show a weekly or monthly summary, based on overall performance, or a per category progress.
-
-Another way to see how this project stands out from previous projects, are the new technologies applied to this current project, which we will board superficially on the complexity section right below, and in more depth during the documentation.
-
-### Complexity
-Complexity in this project is easier, in my opinion, to demonstrate, since I believe to be a more objective measure to take.
-One clear-cut aspect where this project is more complex is the addition of new libraries that are not used during the course's lessons. This new libraries are:
-
-- **Chart.js:**  An open-source library for data visualization, that is, a library that allows the creation of various chart types given preexisting data in an accessible manner. The library also allows for the update of it's data and even properties.
-- **Tempus Dominus**: The successor of the bootstrap datetimepicker. While the documentation says it's a plugin, it looks more like a library to me (maybe because of my inexperience, we may never know for sure). Tempus Dominus allows for a much more appealing calendar that allows for styling.
-
-Regarding brand-new libraries used, that's about it (and even that proved a lot of difficulties I'll explain on a later section), but that doesn't mean the end to the extra complexity, since the tools previously used during the course were also used in a more complex fashion:
-
- - **Bootstrap:** While the course shows a basic use of bootstrap, the requirement of mobile-responsiveness led to the use of a more complex bootstrap.
-   - The use of display-block (d-block) and display-none (d-none) at various widths in order to make the page responsive.
-   - Toasts were implemented into the project, mostly because they look nice, but also provide a very efficient way to relay moment to moment information and feedback to the user.
-   - Use of bootstrap's column system was required in order to keep everything together on a variable screen size.
-  - **CSS:** While most of the course's projects used (understandably) little CSS, this project uses extensive use of it alongside bootstrap for the styling, structuring of the pages and miscellaneous fixes for the sake of responsiveness.
-  - **Data:** In contrast of previous projects, which mostly store and relay data for the user, this project processes data and extrapolates information from the initial input from the user. From parsing to actual calculations based on the long term information on the database.
-  - **Model/Database design**: While it's up to debate whether this projects database design is more complicated or not, I personally believe it slightly is. The tables are interconnected in a way for a user to customize future entries in that same database, in a way allowing the user to make their own form with their specific information.
 ## How to Run
 There's no additional factors in comparison to the rest of CS50Web's projects regarding how to run the project, as long as you're on the main folder of the project, using the command:
 

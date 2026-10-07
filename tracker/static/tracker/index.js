@@ -84,21 +84,10 @@ function list_tasks(content){
     notes.className = 'notes';
     notes.placeholder = 'Any comments?'
     
-    /* notes button scrapped
-    const notes_button = document.createElement('button');
-    notes_button.className = 'notes-button btn';
-    notes_button.innerHTML = ' Save ';
-    */
-
     if (content.note_text != ""){
         notes.value = content.note_text;
     }
 
-    /* not needed once the save button has been scrapped
-    notes_button.addEventListener('click', () => {
-        submit_notes(notes, content);
-    });
-    */
     notes.addEventListener("focusout", () =>{
         submit_notes(notes, content);
     });
@@ -198,7 +187,6 @@ function submit_notes(notes, content){
             
             trigger.show();
 
-            //document.querySelector('#message').innerHTML = `Notes Updated: ${result.notes}`;
         }
 
         

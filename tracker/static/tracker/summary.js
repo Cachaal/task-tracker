@@ -134,7 +134,7 @@ function chart_metrics(year, month, day, mode, category){
 }
 
 function update_calendar(calendar, mode){
-  // It acyually doesn't update the calendar, it deletes it, and then creates a new one with the new configuration
+  // It actually doesn't update the calendar, it deletes it, and then creates a new one with the new configuration
   // Updating the Tempus Dominus doesn't seem to refresh it, this was the best alternative i found.
   if (mode == 'month'){
     if (calendar != undefined){
