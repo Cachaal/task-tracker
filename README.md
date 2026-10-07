@@ -5,11 +5,11 @@ Task tracker is a web tool that allows users to create a custom-made list of hab
 A combination of Django, JavaScript, HTML, CSS, Bootstrap, Chart.js and Tempus Dominus where used in tandem in order to make this project possible.
 
 ## How to Run
-There's no additional factors in comparison to the rest of CS50Web's projects regarding how to run the project, as long as you're on the main folder of the project, using the command:
+No additional dependencies are required beyond the Python environment. From the project root, running:
 
 > python manage.py runserver
 
-Is enough the get the project running, since no additional packages are used.
+Is enough the get the project going, since no additional packages are used.
 ## Project Breakdown
 ### models. py:
 On this file, as expected, the designed database structure was defined based on the following diagram:
